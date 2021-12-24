@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
-""" Imports functions from calculaotr_1.py and prints the results
-using each function """
-
 if __name__ == "__main__":
-
+    """ Prints the results of each function in calculator_1 """
     import calculator_1 as calc
     a = 10
     b = 5
