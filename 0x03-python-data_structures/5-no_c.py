@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 def no_c(my_string):
     new_string = ''
-    new_string += my_string.translate({ord(i): None for i in 'cC'})
+    for letter in my_string:
+        if 'C' != letter != 'c':
+            new_string += letter
     return new_string
