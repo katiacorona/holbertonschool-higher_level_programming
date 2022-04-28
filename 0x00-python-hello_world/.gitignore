@@ -6,9 +6,15 @@ temp/
 
 # ignore main files
 *main.py
+*main.c
 *-
 02.py
 03.py
 04.py
 05.py
 06.py
+07.py
+08.py
+09.py
+cycle
+10-linked_lists.c
