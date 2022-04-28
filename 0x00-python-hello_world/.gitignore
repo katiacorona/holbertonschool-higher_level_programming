@@ -1,0 +1,14 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+# ignore main files
+*main.py
+*-
+02.py
+03.py
+04.py
+05.py
+06.py
