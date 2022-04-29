@@ -8,18 +8,18 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *current, *temp;
+	listint_t *turtle, *hare;
 
 	if (list == NULL || list->next == NULL)
 		return (0);
 
-	current = list;
-	temp = current->next;
-	while (temp->next != NULL)
+	turtle = hare = list;
+	while (hare && turtle)
 	{
-		if (temp->next == current)
+		turtle = turtle->next;
+		hare = hare->next->next;
+		if (hare == turtle)
 			return (1);
-		temp = temp->next;
 	}
 	return (0);
 }
