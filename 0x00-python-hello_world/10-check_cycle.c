@@ -13,13 +13,14 @@ int check_cycle(listint_t *list)
 	if (list == NULL || list->next == NULL)
 		return (0);
 
-	turtle = hare = list;
-	while (hare && turtle && turtle->next != NULL)
+	turtle = list->next;
+	hare = list->next->next;
+	while (turtle != NULL && hare != NULL && hare->next != NULL)
 	{
+		if (turtle == hare)
+			return (1);
 		turtle = turtle->next;
 		hare = hare->next->next;
-		if (hare == turtle)
-			return (1);
 	}
 	return (0);
 }
