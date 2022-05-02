@@ -3,6 +3,8 @@
 
 # ignore ALL files in ANY directory named temp
 temp/
+test/
+*__/
 
 # ignore main files
 *main.py
