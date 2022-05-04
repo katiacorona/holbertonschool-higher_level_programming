@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import os; s = '#pythoniscool'; cmd = "echo '{}'".format(s); os.system(cmd)
+__import__("os").write(1, "#pythoniscool\n".encode())
