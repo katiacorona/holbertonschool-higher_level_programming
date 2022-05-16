@@ -1,0 +1,31 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+test/
+*__/
+
+# ignore main files
+*main.py
+*main.c
+*-
+00.py
+01.py
+02.py
+03.py
+04.py
+05.py
+06.py
+07.py
+08.py
+09.py
+10.py
+11.py
+file_one.py
+file_two.py
+hidden_4.pyc
+calculator_1.py
+add_0.py
+0-import_add.py
+2-calculation.py
