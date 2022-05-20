@@ -15,8 +15,9 @@ def roman_to_int(roman_string):
     }
     n = 0
 
-    if (roman_string is None or not isinstance(roman_string, str)):
-        return None
+    if (roman_string is None or not isinstance(roman_string, str)
+            or len(roman_string) == 0):
+        return 0
 
     for idx in range(len(roman_string)):
         if idx == len(roman_string) - 1:
