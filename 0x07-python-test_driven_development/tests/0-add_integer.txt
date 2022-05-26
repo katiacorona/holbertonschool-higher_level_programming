@@ -11,18 +11,28 @@ Usage:
 ``add_integer()`` returns the addition of its two arguments, ``a`` and ``b``.
 
 To start, import the function from its module:
-    >>> add_integer = __import__("0-add_integer"").__doc__
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Now find the module docstring:
+
+    >>> m = __import__("0-add_integer").add_integer.__doc__
+    >>> len(m) > 1
+    True
 
 Examples:
 ---------
 
 ::
-    Testing with positive integers as values.
+    Testing with positive  and negative integers as values.
+
     >>> add_integer(3, 4)
-    5
+    7
     >>> add_integer(3, -4)
     -1
+
 ::
+
     Testing with floating point values, positive and negative.
 
     >>> add_integer(2.0, 5.0)
@@ -35,4 +45,3 @@ Examples:
     -2
 
     Note: floating point values are type-casted into integers.
-::
