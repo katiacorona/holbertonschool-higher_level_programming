@@ -2,46 +2,98 @@
 This is the 0-add_integer module
 ================================
 
-This module defines a function, ``add_integer()``, which computes the sum of
-two numbers.
+This module defines a function, ``add_integer()``, which computes the sum of two numbers.
 
 Usage:
 ======
 
-``add_integer()`` returns the addition of its two arguments, ``a`` and ``b``.
+``add_integer()`` returns the addition of its two arguments, ``a`` and ``b``.     
 
 To start, import the function from its module:
 
     >>> add_integer = __import__("0-add_integer").add_integer
 
-Now find the module docstring:
-
-    >>> m = __import__("0-add_integer").add_integer.__doc__
-    >>> len(m) > 1
-    True
-
 Examples:
 ---------
 
+Integers and Floating Points:
+
 ::
-    Testing with positive  and negative integers as values.
+    Testing a regular function call.
 
     >>> add_integer(3, 4)
     7
+    >>> add_integer(0, 0)
+    0
+
+::
+    Testing negative integer values.
     >>> add_integer(3, -4)
     -1
+    >>> add_integer(-2, 100)
+    98
+
+::
+    Testing with floating point values, positive and negative.
+
+    >>> add_integer(-2.0, -100.3)
+    -102
+    >>> add_integer(10.0, -5.0)
+    5
+
+    Note: floating point values are type-casted into integers before performing   
+    the addition.
+
+::
+    Testing with both, integer and float values.
+
+    >>> add_integer(2.0, 5)
+    7
+    >>> add_integer(0, -2.3)
+    -2
+
+::
+    Testing by providing only the value for ``a``.
+
+    >>> add_integer(2.3)
+    100
+
+    Note: ``b`` is optional as its default value es set to 98.
+
+Non-Integer and Non-Floating Point Numbers
+
+::
+    Testing with ``float(NaN)``.
+
+    >>> add_integer(0, float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+::
+    Testing with ``float(inf)``.
+
+    >>> add_integer(0, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+::
+    Testing with None.
+
+    >>> add_integer(2.3, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+	Note: If one of the values is not a valid type, TypeError indicates which variable had the invalid data type (a or b).
 
 ::
 
-    Testing with floating point values, positive and negative.
+Strings
 
-    >>> add_integer(2.0, 5.0)
-    7
-    >>> add_integer(-2.0, -5.0)
-    -7
-    >>> add_integer(2.0, -5.0)
-    -3
-    >>> add_integer(-7.9, 5.1)
-    -2
+::
+    Testing with only strings.
 
-    Note: floating point values are type-casted into integers.
+    >>> add_integer("Well", "Hello")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    Note: TypeError was only printed for the first non-valid argument found (a).
