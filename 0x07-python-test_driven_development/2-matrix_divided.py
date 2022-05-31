@@ -24,10 +24,11 @@ def matrix_divided(matrix, div):
     if not isinstance(div, (int, float)):
         raise TypeError('div must be a number')
 
-    if (not isinstance(matrix, list) or matrix == [] or matrix == None or
+    if (not isinstance(matrix, list) or matrix == [] or
             not (isinstance(row, list) for row in matrix) or
             not all((isinstance(x, (int, float)) or isinstance(x, int))
                     for x in [num for row in matrix for num in row])):
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError('matrix must be a matrix (list of lists)'
+                        ' of integers/floats')
 
     return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
