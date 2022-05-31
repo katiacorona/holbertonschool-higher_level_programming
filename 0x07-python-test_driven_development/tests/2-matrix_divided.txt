@@ -1,0 +1,93 @@
+===================================
+This is the 2-matrix_divided module
+===================================
+
+This module defines a function, ``matrix_divided()``, which divides all its elements.
+
+Usage:
+======
+
+``matrix_divided()`` returns a new matrix with all the original elements from matrix divided by ``div``, rounded to 2 decimal places.     
+
+To start, import the function from its module:
+
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Examples:
+---------
+
+Integers and Floating Points:
+
+::
+    Testing a regular function call with a matrix of integers and positive div.
+
+    >>> matrix = [
+    ...    [1, 2, 3],
+    ...    [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+::
+    Testing with a matrix of integers and negative div.
+
+    >>> matrix = [
+    ...    [1, 2, 3],
+    ...    [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, -3))
+    [[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+
+::
+    Testing with a matrix of integers and floating point div.
+
+    >>> matrix = [
+    ...    [1, 2, 3],
+    ...    [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, -3.3))
+    [[-0.3, -0.61, -0.91], [-1.21, -1.52, -1.82]]
+
+::
+    Testing with a matrix of floating point values and floating point div.
+
+    >>> matrix = [
+    ...    [0.33, 0.67, 1.0],
+    ...    [1.33, 1.67, 2.0]
+    ... ]
+    >>> print(matrix_divided(matrix, -10.5))
+    [[-0.03, -0.06, -0.1], [-0.13, -0.16, -0.19]]
+
+::
+    Testing with matrix = None.
+
+    >>> matrix = None
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+Strings
+
+::
+    Testing with div as a string.
+
+    >>> matrix = [
+    ...    [-0.33, -0.67, -1.0],
+    ...    [1.33, 1.67, 2.0]
+    ... ]
+    >>> print(matrix_divided(matrix, 'Nan'))
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+::
+    Testing with a list containing a string.
+
+    >>> matrix = [
+    ... ['1', 2, 3],
+    ... [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
