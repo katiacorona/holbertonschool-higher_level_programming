@@ -37,7 +37,7 @@ Integers:
 
     >>> print_square(-1)
     Traceback (most recent call last):
-    TypeError: size must be >= 0
+    ValueError: size must be >= 0
 
 ::
 
