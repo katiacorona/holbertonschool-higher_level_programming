@@ -1,0 +1,58 @@
+================================
+This is the 3-say_my_name module
+================================
+
+This module defines a function, ``say_my_name()``, which prints a string to the stdin.
+
+Usage:
+======
+
+``say_my_name(first_name, last_name="")`` prints "My name is <first name> <last name>", where <first name> and <last name> must be strings.
+
+To start, import the function from its module:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Examples:
+---------
+
+Strings:
+
+::
+    Testing a regular case.
+
+    >>> say_my_name("Giovanni", "Giorgio")
+    My name is Giovanni Giorgio
+
+::
+    Testing with one argument.
+
+    >>> say_my_name("Bolt")
+    My name is Bolt 
+
+    Note: last_name is optional as it is by default set to "".
+
+::
+    Testing with no arguments.
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+::
+
+Non-strings:
+
+::
+    Testing with last name not a string.
+
+    >>> say_my_name("Timbuk", 2)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+    Testing with last name not a string.
+
+    >>> say_my_name(4, "Non-Blondes")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
