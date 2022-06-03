@@ -1,0 +1,92 @@
+=====================================
+This is the 4-text_indentation module
+=====================================
+
+This module defines the function ``text_indentation()``.
+
+Usage:
+======
+
+``text_indentation(text)`` prints a text with a new line after each of these characters: '.', '?' and ':'.
+
+To start, import the function from its module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Examples:
+---------
+
+Text is a valid string.
+
+::
+    Testing with a valid text.
+
+    >>> text_indentation(". ? and :")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    and :
+    <BLANKLINE>
+
+::
+    Testing with a multi-line string.
+
+    >>> text_indentation("""This is a multiline string: Line 1. \
+    ... Is this line 2? \
+    ... Line 3""")
+    This is a multiline string:
+    <BLANKLINE>
+    Line 1.
+    <BLANKLINE>
+    Is this line 2?
+    <BLANKLINE>
+    Line 3
+
+::
+    Testing with spaces at the begining and end of the string.
+
+    >>> text_indentation("   Hi!")
+    Hi!
+
+::
+    Testing with only spaces.
+
+    >>> text_indentation("        ")
+
+::
+    Testing with an empty string.
+
+    >>> text_indentation("")
+
+::
+    Testing without arguments.
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+::
+
+Non-strings
+
+::
+    Testing with an integer.
+
+    >>> text_indentation(1024)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+    Testing with NaN.
+
+    >>> text_indentation(float('nan'))
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+    Testing with None.
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
