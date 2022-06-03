@@ -7,11 +7,11 @@ Suplies class Rectangle.
 class Rectangle:
     """Defines a rectangle."""
     def __init__(self, width=0, height=0):
-        """Initializer for a rectangle.
+        """Initializes a rectangle.
 
         Args:
-            width: the width of the rectangle.
-            height: the height of the rectangle.
+            width (int): the width of the rectangle.
+            height (int): the height of the rectangle.
         """
         self.width = width
         self.height = height
