@@ -1,0 +1,25 @@
+===============
+Using 1-my_list
+===============
+
+1-my_list module defines a MyList class that inherits from list.
+
+Usage:
+======
+
+To start, import the class from its module:
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list = MyList()
+
+Examples:
+=========
+
+Integers:
+
+::
+    Testing a regular case with integers.
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.print_sorted()
+    [1, 4]
