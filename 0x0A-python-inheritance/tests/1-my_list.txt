@@ -12,14 +12,57 @@ To start, import the class from its module:
     >>> MyList = __import__('1-my_list').MyList
     >>> my_list = MyList()
 
-Examples:
-=========
+Check for module docstring:
 
-Integers:
+    >>> m = __import__("1-my_list").__doc__
+    >>> len(m) > 1
+    True
+
+Check for class docstring:
+
+    >>> c = __import__("1-my_list").MyList.__doc__
+    >>> len(c) > 1
+    True
+
+Check for class method docstring:
+
+    >>> f = __import__("1-my_list").MyList.print_sorted.__doc__
+    >>> len(f) > 1
+    True
+
+Check that MyList inherits from list:
+
+    >>> issubclass(MyList, list)
+    True
 
 ::
-    Testing a regular case with integers.
-    >>> my_list.append(1)
+
+Testing with an empty list:
+
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+
+Testing with append:
+
+    >>> my_list.append(6)
     >>> my_list.append(4)
     >>> my_list.print_sorted()
-    [1, 4]
+    [4, 6]
+    >>> print(my_list)
+    [6, 4]
+
+Testing with negative integers:
+
+    >>> my_list.append(-5)
+    >>> my_list.append(-3)
+    >>> my_list.print_sorted()
+    [-5, -3, 4, 6]
+    >>> print(my_list)
+    [6, 4, -5, -3]
+
+Testing with too many arguments:
+
+    >>> my_list.print_sorted(1)
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
