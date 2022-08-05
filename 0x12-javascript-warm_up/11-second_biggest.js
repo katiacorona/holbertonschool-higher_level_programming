@@ -1,20 +1,19 @@
 #!/usr/bin/node
 'use strict';
 
+// convert the string array into a array of numbers
 const intArray = process.argv.slice(2).map(Number);
+
 console.log(second(intArray));
 
 function second (nums) {
-  const len = nums.length;
-
-  // check if there is at least two elements
-  if (len < 2) {
+  // check if the array has at least two numbers
+  if (nums.length < 2) {
     return 0;
   }
 
-  // sort the array
-  nums.sort();
+  // sort the array in descending order
+  const sortedArray = nums.sort(function (a, b) { return (b - a); });
 
-  // return the second largest number
-  return nums[len - 2];
+  return sortedArray[1];
 }
