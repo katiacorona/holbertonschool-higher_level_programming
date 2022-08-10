@@ -7,7 +7,7 @@ module.exports = class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (typeof c !== "undefined") {
+    if (typeof c !== 'undefined') {
       for (let i = 0; i < this.width; i++) {
         console.log(c.repeat(this.width));
       }
