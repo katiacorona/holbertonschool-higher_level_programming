@@ -1,0 +1,36 @@
+=====================
+Using 7-base_geometry
+=====================
+
+7-base_geometry module implements a BaseGeometry class.
+
+Usage:
+======
+
+To start, import the class from its module and create an instance:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+
+Check for module docstring:
+
+    >>> m = __import__("7-base_geometry").__doc__
+    >>> len(m) > 1
+    True
+
+Check for class docstring:
+
+    >>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(c) > 1
+    True
+
+Check for class method docstring:
+
+    >>> f = __import__("7-base_geometry").BaseGeometry.area.__doc__
+    >>> len(f) > 1
+    True
+
+Check for correct instanciation:
+
+    >>> isinstance(bg, BaseGeometry)
+    True
