@@ -15,3 +15,8 @@ At the end of this project, we are expected to be able to explain to anyone, wit
 - Which attributes or methods are available by heritage to subclasses
 - What is the purpose of inheritance
 - What are, when and how to use isinstance, issubclass, type and super built-in functions
+
+## Contents
+
+* **0. Lookup**
+  * [0-lookup.py](./0-lookup.py) - Receives an object and returns a list of its available attributes and methods.
