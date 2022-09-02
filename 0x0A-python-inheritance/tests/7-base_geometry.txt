@@ -30,7 +30,57 @@ Check for class method docstring:
     >>> len(f) > 1
     True
 
-Check for correct instanciation:
+Check for correct instantiation:
 
     >>> isinstance(bg, BaseGeometry)
     True
+
+::
+
+Check the area method with no argument:
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+Check the integer_validator with an integer number:
+
+    >>> bg.integer_validator('fingers', 1)
+
+Check the integer_validator with zero:
+
+    >>> bg.integer_validator('age', 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+
+Check the integer_validator with a negative numbre:
+
+    >>> bg.integer_validator('balance', -50)
+    Traceback (most recent call last):
+    ValueError: balance must be greater than 0
+
+Check the integer_validator with a floating point:
+
+    >>> bg.integer_validator('slices', 2.5)
+    Traceback (most recent call last):
+    TypeError: slices must be an integer
+
+::
+
+Check the integer_validator with a string:
+
+    >>> bg.integer_validator('counting', 'three')
+    Traceback (most recent call last):
+    TypeError: counting must be an integer
+
+Check the integer_validator with NaN:
+
+    >>> bg.integer_validator('money', float('NaN'))
+    Traceback (most recent call last):
+    TypeError: money must be an integer
+
+Check the integer_validator with Inf:
+
+    >>> bg.integer_validator('love', float('inf'))
+    Traceback (most recent call last):
+    TypeError: love must be an integer
