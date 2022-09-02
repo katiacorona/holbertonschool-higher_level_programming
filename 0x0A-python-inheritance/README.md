@@ -18,5 +18,9 @@ At the end of this project, we are expected to be able to explain to anyone, wit
 
 ## Contents
 
-* **0. Lookup**
-  * [0-lookup.py](./0-lookup.py) - Receives an object and returns a list of its available attributes and methods.
+- **0. Lookup**
+    - [0-lookup.py](./0-lookup.py) :: Receives an object and returns a list of its available attributes and methods.
+
+- **1. My list**
+    - [1-my_list.py](./1-my_list.py) :: Define a class MyList that inherits from list:
+        - Public instance method: def print_sorted(self): that prints the list, but sorted (ascending sort).
