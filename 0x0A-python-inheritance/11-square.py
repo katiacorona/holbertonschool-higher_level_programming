@@ -16,14 +16,5 @@ class Square(Rectangle):
             sieze (int): The size of the new Square object.
         """
         self.integer_validator('size', size)
+        super().__init__(size, size)
         self.__size = size
-
-    def area(self):
-        """Return the area of the Square object."""
-        return self.__size * self.__size
-
-    def __str__(self):
-        """Return the print() and str() representation of a Square."""
-        string = '[{}] '.format(type(self).__name__)
-        string += '{}/{}'.format(self.__size, self.__size)
-        return string
