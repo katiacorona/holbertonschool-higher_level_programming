@@ -3,7 +3,7 @@
 
 # ignore ALL files in ANY directory named temp
 temp/
-test/
+tests/
 *__/
 
 # ignore main files
@@ -23,3 +23,6 @@ test/
 09.py
 10.py
 11.py
+8-main_2.py
+8-my_class.py
+8-my_class_2.py
