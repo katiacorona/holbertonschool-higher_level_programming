@@ -10,6 +10,7 @@ test/
 *main.py
 *main.c
 *.txt
+*.json
 00.py
 01.py
 02.py
