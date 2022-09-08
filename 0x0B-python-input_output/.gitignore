@@ -9,7 +9,7 @@ test/
 # ignore main files
 *main.py
 *main.c
-*-
+*.txt
 00.py
 01.py
 02.py
@@ -22,6 +22,3 @@ test/
 09.py
 10.py
 11.py
-1-test.py
-my_file_0.txt
-my_first_file.txt
